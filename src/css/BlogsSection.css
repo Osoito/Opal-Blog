@@ -1,0 +1,34 @@
+/* Container for the blogs section */
+.blogs-section {
+    width: 100%;
+    padding: 50px 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 80px; /* Space between blog cards */
+}
+
+/* Blog card image */
+.blog-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Blog overview text */
+.blog-overview {
+    margin: 10px 0 20px;
+    line-height: 30px;
+}
+
+/* Button for blog cards */
+.btn.dark {
+    background: #1b1b1b;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    display: inline-block;
+}
