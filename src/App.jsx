@@ -6,6 +6,7 @@ import BlogsSection from './components/BlogsSection';
 import Editor from './components/Editor';
 import BlogPost from './components/BlogPost';
 
+
 const App = () => {
     return (
         <Router>
