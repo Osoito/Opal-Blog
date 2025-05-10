@@ -1,6 +1,6 @@
 {
-  "homepage": "https://osoito.github.io/Opal-Blog/",
   "name": "opal-blog",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
