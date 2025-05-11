@@ -12,22 +12,22 @@ const BlogPost = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        const fetchBlog = async () => {
+        const fetchData = async () => {
             try {
                 const response = await axios.get(`http://localhost:5000/api/blogs/${id}`);
                 setBlog(response.data);
             } catch (error) {
-                console.error('Error fetching blog:', error);
+                console.error('Error fetching data:', error);
                 setError(error.response?.status === 404 ? 'Blog not found' : 'Error loading blog');
                 if (error.response?.status === 404) {
-                    setTimeout(() => navigate('/'), 2000); // Redirect to home after 2 seconds
+                    setTimeout(() => navigate('/'), 2000);
                 }
             } finally {
                 setLoading(false);
             }
         };
 
-        fetchBlog();
+        fetchData();
     }, [id, navigate]);
 
     if (loading) return <div className="blog-post">Loading...</div>;
