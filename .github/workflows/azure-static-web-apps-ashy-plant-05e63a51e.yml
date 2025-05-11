@@ -55,6 +55,18 @@ jobs:
           api_location: ""              # Empty if no API
           skip_api_build: true
           ###### End of Repository/Build Configurations ######
+      - name: Add Custom Routes
+        run: |
+          echo '{
+            "routes": [
+              {
+                "route": "/*",
+                "headers": {
+                  "cache-control": "no-cache, no-store, must-revalidate"
+                }
+              }
+            ]
+          }' > staticwebapp.config.json
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
