@@ -118,3 +118,33 @@ textarea::-webkit-scrollbar-thumb{
     margin-left: 20px;
     font-size: 14px;
 }
+
+.password-check {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.password-check h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.password-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.error-message {
+    color: #ff4444;
+    margin-bottom: 15px;
+    font-size: 14px;
+}

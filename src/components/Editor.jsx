@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import MDEditor from '@uiw/react-md-editor';
+import PasswordCheck from './PasswordCheck';
 import '../css/editor.css';
 
 const Editor = () => {
     const [title, setTitle] = useState('');
     const [article, setArticle] = useState('');
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -41,6 +43,10 @@ const Editor = () => {
             alert('Please fill in both the title and the article.');
         }
     };
+
+    if (!isAuthenticated) {
+        return <PasswordCheck onPasswordCorrect={() => setIsAuthenticated(true)} />;
+    }
 
     return (
         <div className="blog">
